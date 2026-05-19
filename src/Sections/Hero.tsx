@@ -1,4 +1,14 @@
-import { Avatar, Box, Button, SxProps, Theme, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  IconButton,
+  SxProps,
+  Theme,
+  Typography,
+} from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
 
 const neonColor = "#26a34c";
 
@@ -47,7 +57,8 @@ const boxContentLayoutStyles: SxProps<Theme> = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  maxWidth: { xs: 300, lg: 400}
+  maxWidth: { xs: 300, lg: 400 },
+  gap: 2
 };
 
 const boxButtonLayoutStyles: SxProps<Theme> = {
@@ -69,6 +80,7 @@ const buttonStyles: SxProps<Theme> = {
         0 0 8px ${neonColor}
       `,
   "&:hover": {
+    backgroundColor: neonColor,
     boxShadow: `
         inset 0 0 3px ${neonColor},
         0 0 6px ${neonColor},
@@ -102,27 +114,28 @@ export default function Hero() {
       <Box sx={boxBodyLayoutStyles}>
         <Box sx={boxTitleLayoutStyles}>
           <Typography sx={titleStyles} variant="h3">
-            Titulo Massa e Chamativo
+            Olá, me chamo João
           </Typography>
-          <Avatar sx={responsiveNeonStyles} />
+          <Avatar sx={responsiveNeonStyles} src="/profile.jpg" />
         </Box>
         <Box sx={boxContentLayoutStyles}>
           <Typography sx={textStyles} variant="body1">
-            Texto Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
-            aspernatur id ea autem corporis fugiat non quaerat ducimus
-            temporibus provident, iure architecto sit ex nemo natus error
-            facilis earum inventore.
+            Desenvolvedor de software apaixonado por criar soluções e resolver
+            problemas do mundo real.
+          </Typography>
+		  <Typography sx={textStyles} variant="body1">
+            Aqui vocês vão poder encontrar mais sobre meus projetos!
           </Typography>
           <Box sx={boxButtonLayoutStyles}>
-            <Button variant="contained" sx={buttonStyles}>
-              botao
-            </Button>
-            <Button variant="contained" sx={buttonStyles}>
-              de
-            </Button>
-            <Button variant="contained" sx={buttonStyles}>
-              teste
-            </Button>
+            <IconButton sx={buttonStyles}>
+              <LinkedInIcon />
+            </IconButton>
+            <IconButton sx={buttonStyles}>
+              <GitHubIcon />
+            </IconButton>
+            <IconButton sx={buttonStyles}>
+              <EmailIcon />
+            </IconButton>
           </Box>
         </Box>
       </Box>

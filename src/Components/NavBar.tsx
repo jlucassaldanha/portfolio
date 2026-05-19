@@ -33,8 +33,7 @@ export default function NavBar({ links }: NavBarProps) {
                 activeTab === link.id ? `2px solid ${neonColor}` : "none",
 			  color:
                 activeTab === link.id ? neonColor : "white",
-              
-            }}
+			}}
             href={`#${link.id}`}
             onClick={() => setActiveTab(link.id)}
           >
