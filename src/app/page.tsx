@@ -1,8 +1,4 @@
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Avatar,
   Box,
   Card,
   CardContent,
@@ -19,6 +15,7 @@ import NavBar from "@/Components/NavBar";
 import { Theme } from "@emotion/react";
 import About from "@/Sections/About";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Contact from "@/Sections/Contact";
 
 const NAV_LINKS = [
   { id: "inicio", label: "Início" },
@@ -52,26 +49,6 @@ const cardStyles: SxProps<Theme> = {
 const cardImageStyles: SxProps<Theme> = {
   width: { xs: 250, lg: 400 },
   height: { xs: 200, lg: 400 },
-};
-
-const subtitleStyles: SxProps<Theme> = {
-  maxWidth: { xs: 300, lg: 450 },
-  fontSize: { xs: 24, lg: 80 },
-  fontWeight: "bolder",
-  color: neonColor,
-};
-
-const boxSubtitleStyles: SxProps<Theme> = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: 2,
-};
-
-const textStyles: SxProps<Theme> = {
-  fontSize: { xs: 18, lg: 25 },
-  color: "whitesmoke"
 };
 
 export default function Home() {
@@ -109,7 +86,7 @@ export default function Home() {
           </Card>
         </Section>
         <Section id="contato" bgColor="#141414">
-          C
+          <Contact />
         </Section>
       </Box>
     </Box>
