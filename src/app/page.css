@@ -1,0 +1,34 @@
+/* Definição das variáveis no escopo global ou do componente */
+:root {
+  --neon-color: #00ffff; /* Ciano */
+  --neon-border-size: 2px;
+  --neon-blur-interno: 5px;
+  --neon-blur-externo-1: 10px;
+  --neon-blur-externo-2: 20px;
+  --neon-blur-externo-3: 40px;
+}
+
+
+
+.componente-neon {
+  padding: 2rem 4rem;
+  color: #ffffff;
+  background-color: transparent;
+  
+  /* Borda base sólida */
+  border: var(--neon-border-size) solid var(--neon-color);
+  border-radius: 8px;
+  
+  /* 
+    Construção do Neon através de múltiplas camadas:
+    1. Sombra interna (inset) para brilho dentro da caixa
+    2. Sombra externa curta (núcleo do brilho)
+    3. Sombra externa média (difusão primária)
+    4. Sombra externa longa (difusão secundária)
+  */
+  box-shadow: 
+    inset 0 0 var(--neon-blur-interno) var(--neon-color),
+    0 0 var(--neon-blur-externo-1) var(--neon-color),
+    0 0 var(--neon-blur-externo-2) var(--neon-color),
+    0 0 var(--neon-blur-externo-3) var(--neon-color);
+}
