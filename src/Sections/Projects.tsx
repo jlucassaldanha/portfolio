@@ -43,7 +43,8 @@ export default function Projects({ projects }: ProjectsProps) {
 			key={i}
 			name={project.name}
 			about={project.about}
-			href={project.href}
+			linkGitHub={project.linkGitHub}
+			linkDeploy={project.linkDeploy}
 		/>
 	  ))}
 	  <Box sx={boxButtonLayoutStyles}>

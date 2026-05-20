@@ -21,19 +21,23 @@ const PROJECTS: ProjectCardProps[] = [
   { 
     name: "Controle de Ponto", 
     about: "Aplicação para controle de horas extras costruída em Next.JS",
-    href: "https://github.com/jlucassaldanha/controle-ponto"
+    linkGitHub: "https://github.com/jlucassaldanha/controle-ponto",
+    linkDeploy: "https://controleponto.vercel.app"
   },
   { 
     name: "Spectra Live", 
     about: "Aplicação de monitoramento do chat da Twitch com React e Python",
-    href: "https://github.com/jlucassaldanha/spectra-live"
+    linkGitHub: "https://github.com/jlucassaldanha/spectra-live",
+    linkDeploy: "https://spectralive.vercel.app"
   },
   { 
     name: "BankBills", 
-    about: "Aplicação para analise de gastos com C# .NET",
-    href: "https://github.com/jlucassaldanha/BankBills"
+    about: "API Rest para analise de gastos com C# .NET",
+    linkGitHub: "https://github.com/jlucassaldanha/BankBills"
   },
 ]
+
+// Adicionar tooltips
 
 export default function Home() {
   return (

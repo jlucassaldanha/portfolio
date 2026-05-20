@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const neonColor = "#26a34c";
 
@@ -45,13 +46,34 @@ const titleStyles: SxProps<Theme> = {
   pb: 2
 };
 
+const buttonStyles: SxProps<Theme> = {
+  backgroundColor: neonColor,
+  borderRadius: 5,
+  boxShadow: `
+    inset 0 0 1px ${neonColor},
+    0 0 2px ${neonColor},
+    0 0 4px ${neonColor},
+    0 0 8px ${neonColor}
+    `,
+  "&:hover": {
+  backgroundColor: neonColor,
+  boxShadow: `
+    inset 0 0 3px ${neonColor},
+    0 0 6px ${neonColor},
+    0 0 12px ${neonColor},
+    0 0 24px ${neonColor}
+    `,
+  },
+};
+
 export interface ProjectCardProps {
   name: string, 
   about: string, 
-  href: string
+  linkGitHub?: string
+  linkDeploy?: string
 }
 
-export default function ProjectCard({ name, about, href }: ProjectCardProps) {
+export default function ProjectCard({ name, about, linkGitHub, linkDeploy }: ProjectCardProps) {
   return (
     <Card sx={cardStyles}>
       <CardContent>
@@ -62,10 +84,17 @@ export default function ProjectCard({ name, about, href }: ProjectCardProps) {
           {about}
         </Typography>
       </CardContent>
-      <CardContent>
-        <IconButton sx={{color: "whitesmoke"}} href={href} target="_blank">
-          <GitHubIcon />
-        </IconButton>
+      <CardContent sx={{display: "flex", flexDirection: "column", gap: 1}}>
+        {linkDeploy && (
+          <IconButton sx={buttonStyles} href={linkDeploy} target="_blank">
+            <ArrowForwardIcon />
+          </IconButton>
+        )}
+        {linkGitHub && (
+          <IconButton sx={buttonStyles} href={linkGitHub} target="_blank">
+            <GitHubIcon />
+          </IconButton>
+        )}
       </CardContent>
     </Card>
   );

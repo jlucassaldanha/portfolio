@@ -24,7 +24,7 @@ const boxContentLayoutStyles: SxProps<Theme> = {
   justifyContent: "center",
   alignItems: "start",
   maxWidth: { xs: 500, lg: 10000 },
-  gap: 2
+  gap: 6
 };
 
 const boxBodyLayoutStyles: SxProps<Theme> = {
