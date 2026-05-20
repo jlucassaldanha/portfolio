@@ -10,8 +10,10 @@ import { useState } from "react";
 
 const neonColor = "#26a34c";
 
+export interface NavLinkInfo { id: string; label: string }
+
 interface NavBarProps {
-  links: { id: string; label: string }[];
+  links: NavLinkInfo[];
 }
 
 // usar Toggle Button

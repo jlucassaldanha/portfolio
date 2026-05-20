@@ -1,14 +1,11 @@
 import {
   Avatar,
   Box,
-  IconButton,
+  Button,
   SxProps,
   Theme,
   Typography,
 } from "@mui/material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import EmailIcon from "@mui/icons-material/Email";
 
 const neonColor = "#26a34c";
 
@@ -57,8 +54,9 @@ const boxContentLayoutStyles: SxProps<Theme> = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  maxWidth: { xs: 300, lg: 400 },
-  gap: 2
+  maxWidth: { xs: 300, lg: 450 },
+  mt: { lg: 15 },
+  gap: 1,
 };
 
 const boxButtonLayoutStyles: SxProps<Theme> = {
@@ -123,19 +121,11 @@ export default function Hero() {
             Desenvolvedor de software apaixonado por criar soluções e resolver
             problemas do mundo real.
           </Typography>
-		  <Typography sx={textStyles} variant="body1">
+          <Typography sx={textStyles} variant="body1">
             Aqui vocês vão poder encontrar mais sobre meus projetos!
           </Typography>
           <Box sx={boxButtonLayoutStyles}>
-            <IconButton sx={buttonStyles}>
-              <LinkedInIcon />
-            </IconButton>
-            <IconButton sx={buttonStyles}>
-              <GitHubIcon />
-            </IconButton>
-            <IconButton sx={buttonStyles}>
-              <EmailIcon />
-            </IconButton>
+            <Button sx={buttonStyles} variant="contained" href="#contato" >Entrar em contato</Button>
           </Box>
         </Box>
       </Box>

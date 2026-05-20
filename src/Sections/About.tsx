@@ -11,22 +11,27 @@ const titleStyles: SxProps<Theme> = {
 };
 
 const textStyles: SxProps<Theme> = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  maxWidth: { lg: "50%" } ,
   fontSize: { xs: 18, lg: 25 },
 };
 
 const boxContentLayoutStyles: SxProps<Theme> = {
   display: "flex",
-  flexDirection: "column",
+  flexDirection: { xs: "column", lg: "row"},
   justifyContent: "center",
-  alignItems: "center",
-  maxWidth: { xs: 300, lg: 400 },
+  alignItems: "start",
+  maxWidth: { xs: 500, lg: 10000 },
   gap: 2
 };
 
 const boxBodyLayoutStyles: SxProps<Theme> = {
   display: "flex",
-  pb: 30,
-  flexDirection: { xs: "column", lg: "row" },
+  pb: 15,
+  px: { xs: 5, lg: 10 },
+  flexDirection:  "column",
   justifyContent: "center",
   alignItems: "center",
   gap: { xs: 5, lg: 8 },

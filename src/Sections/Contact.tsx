@@ -54,15 +54,15 @@ export default function Contact() {
               pb: 8
             }}
           >
-          <Typography sx={titleStyles} variant="h3" >Gostou? Entre em contato</Typography>
+          <Typography sx={titleStyles} variant="h3" >Entre em contato</Typography>
           <Box sx={boxButtonLayoutStyles}>
-            <IconButton sx={buttonStyles}>
+            <IconButton sx={buttonStyles} href="https://www.linkedin.com/in/joao-lucas-saldanha" target="_blank">
               <LinkedInIcon />
             </IconButton>
-            <IconButton sx={buttonStyles}>
+            <IconButton sx={buttonStyles} href="https://github.com/jlucassaldanha" target="_blank">
               <GitHubIcon />
             </IconButton>
-            <IconButton sx={buttonStyles}>
+            <IconButton sx={buttonStyles} href="mailto:j.lucassaldanha@gmail.com" target="_blank">
               <EmailIcon />
             </IconButton>
           </Box>
