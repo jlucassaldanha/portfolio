@@ -1,14 +1,11 @@
-import {
-  Box,
-  GlobalStyles,
-} from "@mui/material";
-import Section from "../Components/Section";
-import Hero from "@/Sections/Hero";
-import NavBar, { NavLinkInfo } from "@/Components/NavBar";
-import About from "@/Sections/About";
-import Contact from "@/Sections/Contact";
-import Projects from "@/Sections/Projects";
-import { ProjectCardProps } from "@/Components/ProjectCard";
+import { Box, GlobalStyles } from "@mui/material";
+import Section from "../components/Section/Section";
+import Hero from "@/sections/Hero/Hero";
+import NavBar, { NavLinkInfo } from "@/components/NavBar/NavBar";
+import About from "@/sections/About/About";
+import Contact from "@/sections/Contact/Contact";
+import Projects from "@/sections/Projects/Projects";
+import { ProjectCardProps } from "@/components/ProjectCard/ProjectCard";
 
 const NAV_LINKS: NavLinkInfo[] = [
   { id: "inicio", label: "Início" },
@@ -18,24 +15,24 @@ const NAV_LINKS: NavLinkInfo[] = [
 ];
 
 const PROJECTS: ProjectCardProps[] = [
-  { 
-    name: "Controle de Ponto", 
+  {
+    name: "Controle de Ponto",
     about: "Aplicação para controle de horas extras costruída em Next.JS",
     linkGitHub: "https://github.com/jlucassaldanha/controle-ponto",
-    linkDeploy: "https://controleponto.vercel.app"
+    linkDeploy: "https://controleponto.vercel.app",
   },
-  { 
-    name: "Spectra Live", 
+  {
+    name: "Spectra Live",
     about: "Aplicação de monitoramento do chat da Twitch com React e Python",
     linkGitHub: "https://github.com/jlucassaldanha/spectra-live",
-    linkDeploy: "https://spectralive.vercel.app"
+    linkDeploy: "https://spectralive.vercel.app",
   },
-  { 
-    name: "BankBills", 
+  {
+    name: "BankBills",
     about: "API Rest para analise de gastos com C# .NET",
-    linkGitHub: "https://github.com/jlucassaldanha/BankBills"
+    linkGitHub: "https://github.com/jlucassaldanha/BankBills",
   },
-]
+];
 
 // Adicionar tooltips
 
@@ -45,16 +42,16 @@ export default function Home() {
       <GlobalStyles styles={{ html: { scrollBehavior: "smooth" } }} />
       <NavBar links={NAV_LINKS} />
       <Box component="main">
-        <Section id="inicio" bgColor="#141414">
+        <Section id="inicio">
           <Hero />
         </Section>
-        <Section id="sobre" bgColor="#202020">
+        <Section id="sobre">
           <About />
         </Section>
-        <Section id="projetos" bgColor="#141414">
-          <Projects projects={PROJECTS}/>
+        <Section id="projetos">
+          <Projects projects={PROJECTS} />
         </Section>
-        <Section id="contato" bgColor="#202020">
+        <Section id="contato">
           <Contact />
         </Section>
       </Box>
